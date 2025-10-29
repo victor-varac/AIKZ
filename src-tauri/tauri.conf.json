@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.tauri.app/config/2.0.0",
+  "productName": "AIKZ Sistema de Gestión",
+  "version": "1.0.0",
+  "identifier": "com.aikz.gestion",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "AIKZ Sistema de Gestión",
+        "width": 1200,
+        "height": 800,
+        "minWidth": 1024,
+        "minHeight": 768,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "category": "Business",
+    "copyright": "© 2025 AIKZ",
+    "shortDescription": "Sistema AIKZ de Gestión",
+    "longDescription": "Sistema de gestión empresarial AIKZ para control de inventarios, ventas y clientes",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "active": true,
+      "dialog": false,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDE5QzMxNjYwNTM5OEUwNTgKUldSWTRKaUVZSTNqejlQQ1ZEL2dKNm5QM2lNT2ErTlpuaDNsU0xjZCtrL001L1lQRlFCWGdUdjIK",
+      "endpoints": [
+        "https://releases.mycompany.com/{{target}}/{{arch}}/{{current_version}}"
+      ]
+    }
+  }
+}
