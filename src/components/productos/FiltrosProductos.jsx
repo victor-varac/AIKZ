@@ -5,12 +5,9 @@ const FiltrosProductos = ({ onApplyFilters, onResetFilters, loading, material })
     nombre: '',
     presentacion: '',
     tipo: '',
-    anchoMinimo: '',
-    anchoMaximo: '',
-    largoMinimo: '',
-    largoMaximo: '',
-    micrajeMinimo: '',
-    micrajeMaximo: ''
+    ancho: '',
+    largo: '',
+    micraje: ''
   });
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -21,12 +18,9 @@ const FiltrosProductos = ({ onApplyFilters, onResetFilters, loading, material })
       nombre: '',
       presentacion: '',
       tipo: '',
-      anchoMinimo: '',
-      anchoMaximo: '',
-      largoMinimo: '',
-      largoMaximo: '',
-      micrajeMinimo: '',
-      micrajeMaximo: ''
+      ancho: '',
+      largo: '',
+      micraje: ''
     });
   }, [material]);
 
@@ -43,7 +37,7 @@ const FiltrosProductos = ({ onApplyFilters, onResetFilters, loading, material })
         .filter(([_, value]) => value !== '')
         .map(([key, value]) => {
           // Convertir valores numéricos a números
-          if (['anchoMinimo', 'anchoMaximo', 'largoMinimo', 'largoMaximo', 'micrajeMinimo', 'micrajeMaximo'].includes(key)) {
+          if (['ancho', 'largo', 'micraje'].includes(key)) {
             return [key, parseFloat(value)];
           }
           return [key, value];
@@ -57,12 +51,9 @@ const FiltrosProductos = ({ onApplyFilters, onResetFilters, loading, material })
       nombre: '',
       presentacion: '',
       tipo: '',
-      anchoMinimo: '',
-      anchoMaximo: '',
-      largoMinimo: '',
-      largoMaximo: '',
-      micrajeMinimo: '',
-      micrajeMaximo: ''
+      ancho: '',
+      largo: '',
+      micraje: ''
     });
     onResetFilters();
   };
@@ -215,92 +206,47 @@ const FiltrosProductos = ({ onApplyFilters, onResetFilters, loading, material })
               </select>
             </div>
 
-            {/* Ancho mínimo */}
+            {/* Ancho */}
             <div className="space-y-2">
               <label className="block text-sm font-medium text-gray-700">
-                Ancho mínimo (cm)
+                Ancho (cm)
               </label>
               <input
                 type="number"
-                placeholder="0"
+                placeholder="Ej: 50"
                 step="0.1"
-                value={filtros.anchoMinimo}
-                onChange={(e) => handleInputChange('anchoMinimo', e.target.value)}
+                value={filtros.ancho}
+                onChange={(e) => handleInputChange('ancho', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
-            {/* Ancho máximo */}
+            {/* Largo */}
             <div className="space-y-2">
               <label className="block text-sm font-medium text-gray-700">
-                Ancho máximo (cm)
+                Largo (cm)
               </label>
               <input
                 type="number"
-                placeholder="999"
+                placeholder="Ej: 100"
                 step="0.1"
-                value={filtros.anchoMaximo}
-                onChange={(e) => handleInputChange('anchoMaximo', e.target.value)}
+                value={filtros.largo}
+                onChange={(e) => handleInputChange('largo', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
-            {/* Largo mínimo */}
+            {/* Micraje */}
             <div className="space-y-2">
               <label className="block text-sm font-medium text-gray-700">
-                Largo mínimo (cm)
+                Micraje (μm)
               </label>
               <input
                 type="number"
-                placeholder="0"
+                placeholder="Ej: 25"
                 step="0.1"
-                value={filtros.largoMinimo}
-                onChange={(e) => handleInputChange('largoMinimo', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            {/* Largo máximo */}
-            <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-700">
-                Largo máximo (cm)
-              </label>
-              <input
-                type="number"
-                placeholder="999"
-                step="0.1"
-                value={filtros.largoMaximo}
-                onChange={(e) => handleInputChange('largoMaximo', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            {/* Micraje mínimo */}
-            <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-700">
-                Micraje mínimo (μm)
-              </label>
-              <input
-                type="number"
-                placeholder="0"
-                step="0.1"
-                value={filtros.micrajeMinimo}
-                onChange={(e) => handleInputChange('micrajeMinimo', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            {/* Micraje máximo */}
-            <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-700">
-                Micraje máximo (μm)
-              </label>
-              <input
-                type="number"
-                placeholder="999"
-                step="0.1"
-                value={filtros.micrajeMaximo}
-                onChange={(e) => handleInputChange('micrajeMaximo', e.target.value)}
+                value={filtros.micraje}
+                onChange={(e) => handleInputChange('micraje', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>

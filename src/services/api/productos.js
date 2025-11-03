@@ -22,31 +22,19 @@ export const getProductosPorMaterial = async (material, params = {}) => {
     query = query.ilike('nombre', `%${filtros.nombre}%`);
   }
 
-  if (filtros.anchoMinimo) {
-    query = query.gte('ancho_cm', filtros.anchoMinimo);
+  if (filtros.ancho) {
+    query = query.eq('ancho_cm', filtros.ancho);
   }
 
-  if (filtros.anchoMaximo) {
-    query = query.lte('ancho_cm', filtros.anchoMaximo);
+  if (filtros.largo) {
+    query = query.eq('largo_cm', filtros.largo);
   }
 
-  if (filtros.largoMinimo) {
-    query = query.gte('largo_cm', filtros.largoMinimo);
+  if (filtros.micraje) {
+    query = query.eq('micraje_um', filtros.micraje);
   }
 
-  if (filtros.largoMaximo) {
-    query = query.lte('largo_cm', filtros.largoMaximo);
-  }
-
-  if (filtros.micrajeMinimo) {
-    query = query.gte('micraje_um', filtros.micrajeMinimo);
-  }
-
-  if (filtros.micrajeMaximo) {
-    query = query.lte('micraje_um', filtros.micrajeMaximo);
-  }
-
-  // Paginación
+  // Paginaciï¿½n
   query = query.range(offset, offset + limit - 1);
 
   const { data, error, count } = await query;
@@ -132,7 +120,7 @@ export const deleteProducto = async (id) => {
   return true;
 };
 
-// Obtener stock actual de un producto (requiere JOIN con almacén)
+// Obtener stock actual de un producto (requiere JOIN con almacï¿½n)
 export const getStockProducto = async (productoId, material) => {
   let tableName = '';
   let campoStock = '';
@@ -144,7 +132,7 @@ export const getStockProducto = async (productoId, material) => {
     tableName = 'almacen_polietileno_movimientos';
     campoStock = 'kilos';
   } else {
-    throw new Error('Material no válido');
+    throw new Error('Material no vï¿½lido');
   }
 
   const { data, error } = await supabase
