@@ -41,7 +41,15 @@
   },
   "plugins": {
     "updater": {
-      "active": false
+      "active": true,
+      "endpoints": [
+        "https://github.com/USUARIO/REPOSITORIO/releases/latest/download/latest.json"
+      ],
+      "dialog": false,
+      "pubkey": "AQUI_IRA_TU_CLAVE_PUBLICA_GENERADA",
+      "windows": {
+        "installMode": "passive"
+      }
     }
   }
 }

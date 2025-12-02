@@ -51,7 +51,7 @@ export const useUpdater = () => {
       setError(null);
 
       // Importar dinámicamente
-      const { relaunch } = await import('@tauri-apps/api/process');
+      const { relaunch } = await import('@tauri-apps/plugin-process');
 
       // Descargar e instalar la actualización con progreso
       await updateInfo.downloadAndInstall((event) => {

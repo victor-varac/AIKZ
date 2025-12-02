@@ -1,4 +1,5 @@
 import UserMenu from './UserMenu';
+import UpdateButton from './UpdateButton';
 
 export default function Header() {
   return (
@@ -8,7 +9,10 @@ export default function Header() {
           <h1 className="text-2xl font-bold text-gray-900">AIKZ</h1>
           <span className="text-sm text-gray-500">Sistema de Gestión Industrial</span>
         </div>
-        <UserMenu />
+        <div className="flex items-center space-x-4">
+          <UpdateButton />
+          <UserMenu />
+        </div>
       </div>
     </header>
   );
