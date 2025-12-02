@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2.0.0",
   "productName": "AIKZ Sistema de Gestión",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "identifier": "com.aikz.gestion",
   "build": {
     "beforeDevCommand": "npm run dev",
@@ -43,10 +43,10 @@
     "updater": {
       "active": true,
       "endpoints": [
-        "https://github.com/USUARIO/REPOSITORIO/releases/latest/download/latest.json"
+        "https://github.com/victor-varac/AIKZ/releases/latest/download/latest.json"
       ],
       "dialog": false,
-      "pubkey": "AQUI_IRA_TU_CLAVE_PUBLICA_GENERADA",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEM1M0ZEMjU2RDFGMTkyMTEKUldRUmt2SFJWdEkveFp1ZTlGeHE1SitYNTE5NXFwNmJ5UGJ1TXlaaExXTHpVN2grajdLL1pWb1kK",
       "windows": {
         "installMode": "passive"
       }

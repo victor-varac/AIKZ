@@ -1,0 +1,11 @@
+{
+    "version": "1.0.1",
+    "notes": "Correcciones de errores y mejoras de rendimiento",
+    "pub_date": "2025-12-01T23:36:12Z",
+    "platforms": {
+        "windows-x86_64": {
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUldVUmt2SFJWdEkveFp1ZTlGeHE1SitYNTE5NXFwNmJ5UGJ1TXlaaExXTHpVN2grajdLL1pWb1kKdW50cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzMzMTk5NTI5CWZpbGU6QUlLWiBTaXN0ZW1hIGRlIEdlc3Rpw7NuXzEuMC4xX3g2NF9lbi1VUy5tc2kuemlwCkRFQUZCNjM3QzY4RjI5QjNFNjE4RjE0OEUwRjQ4QzM2M0NBMjA0RjJBMzcxQjQ3OEZBRjA1QkU5QzQ4OEE5QkQ4QzQ0RkY0NjA3N0I3N0M0N0MyM0MzQzM2RTU2RjU0Q0RBMjU3RjQyN0E5QzU2MDQyODk5M0QzRkI3Q0Q4MDkK",
+            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.1/AIKZ.Sistema.de.Gestion_1.0.1_x64_en-US.msi.zip"
+        }
+    }
+}
