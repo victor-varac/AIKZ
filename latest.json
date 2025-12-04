@@ -1,11 +1,11 @@
 {
-    "version": "1.0.4",
-    "notes": "Corrección final: Se fuerza la visualización del botón de actualización y se relajan las comprobaciones de entorno.",
-    "pub_date": "2025-12-04T22:26:33Z",
+    "version": "1.0.5",
+    "notes": "Actualización de prueba para verificar el sistema de auto-update.",
+    "pub_date": "2025-12-04T22:43:54Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUldVUmt2SFJWdEkveFp1ZTlGeHE1SitYNTE5NXFwNmJ5UGJ1TXlaaExXTHpVN2grajdLL1pWb1kKdW50cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzMzMzk5NDQ0CWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjRfeDY0X2VuLVVTLm1zaS56aXAKZ093a1d0QzZ1YnZ1S3F4R3Z3d0VjV3B4T3lVb1l5Z1d3QzR5VVBhbGNqak1hQjlNMER3PT0KTEhpb0dqVCt5REtmVndDVmNIVllCZi8wbkM5eWlOTUVSM1PT0K",
-            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.4/AIKZ.Sistema.de.Gestion_1.0.4_x64_en-US.msi.zip"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUldVUmt2SFJWdEkveFp1ZTlGeHE1SitYNTE5NXFwNmJ5UGJ1TXlaaExXTHpVN2grajdLL1pWb1kKdW50cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzMzNDAwNDg1CWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjVfeDY0X2VuLVVTLm1zaS56aXAKc3J3L294Z3l6U1hWd1p2eXJ2Z2ZkYjFqS0d3aFhWd2xXWkdjd1p6K2grYnVJSUJRPT0KQThjNTBFTWRQelZ3NkZrYTFtNHBQRGIyK0xXclp2S25VJSUJRPT0K",
+            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.5/AIKZ.Sistema.de.Gestion_1.0.5_x64_en-US.msi.zip"
         }
     }
 }
