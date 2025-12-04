@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 
 // Verificar si estamos en un entorno Tauri
 const isTauri = () => {
-  return typeof window !== 'undefined' && (window.__TAURI__ || window.__TAURI_INTERNALS__);
+  // Always return true to force attempts
+  return true;
+  // return typeof window !== 'undefined' && (window.__TAURI__ || window.__TAURI_INTERNALS__);
 };
 
 // Verificar si estamos en modo desarrollo
@@ -18,11 +20,8 @@ export const useUpdater = () => {
   const [error, setError] = useState(null);
 
   const checkForUpdates = async () => {
-    // No verificar actualizaciones en desarrollo o si no estamos en Tauri
-    if (!isTauri() || isDevelopment()) {
-      console.log('Omitiendo verificación de actualizaciones (desarrollo o no-Tauri)');
-      return;
-    }
+    // Intentar verificar siempre, ignorando comprobaciones estrictas
+    // if (!isTauri() || isDevelopment()) { ... }
 
     try {
       // Importar dinámicamente solo si estamos en Tauri de producción
@@ -44,7 +43,7 @@ export const useUpdater = () => {
   };
 
   const downloadAndInstall = async () => {
-    if (!updateInfo || !isTauri() || isDevelopment()) return;
+    if (!updateInfo) return;
 
     try {
       setIsUpdating(true);
@@ -85,8 +84,8 @@ export const useUpdater = () => {
   };
 
   useEffect(() => {
-    // Solo ejecutar en Tauri de producción
-    if (!isTauri() || isDevelopment()) return;
+    // Ejecutar siempre
+    // if (!isTauri() || isDevelopment()) return;
 
     // Verificar actualizaciones al montar el componente
     checkForUpdates();
@@ -106,6 +105,6 @@ export const useUpdater = () => {
     checkForUpdates,
     downloadAndInstall,
     dismissUpdate,
-    isTauri: isTauri() && !isDevelopment()
+    isTauri: true // Force true for debugging
   };
 };

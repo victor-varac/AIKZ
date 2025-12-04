@@ -17,10 +17,10 @@ export default function UpdateButton() {
   const [checking, setChecking] = useState(false);
   const [showNoUpdateMessage, setShowNoUpdateMessage] = useState(false);
 
-  // Solo mostrar en builds de producción de Tauri
-  if (!isTauri) {
-    return null;
-  }
+  // Force render for debugging
+  // if (!isTauri) {
+  //   return null;
+  // }
 
   const handleCheckUpdate = async () => {
     setChecking(true);
@@ -50,11 +50,10 @@ export default function UpdateButton() {
         <button
           onClick={handleCheckUpdate}
           disabled={checking}
-          className={`flex items-center space-x-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-            checking
+          className={`flex items-center space-x-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${checking
               ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
               : 'bg-blue-50 text-blue-600 hover:bg-blue-100'
-          }`}
+            }`}
           title="Buscar actualizaciones"
         >
           <svg
@@ -126,11 +125,10 @@ export default function UpdateButton() {
               <button
                 onClick={downloadAndInstall}
                 disabled={isUpdating}
-                className={`flex-1 px-4 py-2 rounded-md font-medium transition-colors ${
-                  isUpdating
+                className={`flex-1 px-4 py-2 rounded-md font-medium transition-colors ${isUpdating
                     ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                     : 'bg-blue-600 text-white hover:bg-blue-700'
-                }`}
+                  }`}
               >
                 {isUpdating ? 'Actualizando...' : 'Actualizar Ahora'}
               </button>
