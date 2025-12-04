@@ -1,11 +1,11 @@
 {
-    "version": "1.0.6",
-    "notes": "Corrección de endpoint de actualización: Ahora usa Raw GitHub URL para evitar problemas de caché.",
-    "pub_date": "2025-12-04T23:10:00Z",
+    "version": "1.0.7",
+    "notes": "Prueba final de auto-update desde v1.0.6.",
+    "pub_date": "2025-12-04T23:24:32Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUldVUmt2SFJWdEkveFp1ZTlGeHE1SitYNTE5NXFwNmJ5UGJ1TXlaaExXTHpVN2grajdLL1pWb1kKdW50cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzMzNDAyMDQ4CWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjZfeDY0X2VuLVVTLm1zaS56aXAKa2V4b0l1QW9xZlJ5bXh2b0h6Z29wL3F1aGZ2Z2J6aXJzU01BeWhrdFQ0bGowMW9ESEJ3PT0KZ0ZjYnNIOXR4d2ZYL1pEa20xYlhBWncyOHJCWlF1RkZ4QSUJRPT0K",
-            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.6/AIKZ.Sistema.de.Gestion_1.0.6_x64_en-US.msi.zip"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUldVUmt2SFJWdEkveFp1ZTlGeHE1SitYNTE5NXFwNmJ5UGJ1TXlaaExXTHpVN2grajdLL1pWb1kKdW50cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzMzNDAyOTIwCWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjdfeDY0X2VuLVVTLm1zaS56aXAKZ093a1d0QzZ1YnZ1S3F4R3Z3d0VjV3B4T3lVb1l5Z1d3QzR5VEEvZkhoOUlRWEsybkRBPT0KcGNEMWM2VWhZZ2hxZ2p0bjJUZGdSS2xiVHQ1EsybkRBPT0K",
+            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.7/AIKZ.Sistema.de.Gestion_1.0.7_x64_en-US.msi.zip"
         }
     }
 }
