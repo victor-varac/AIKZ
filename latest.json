@@ -1,11 +1,11 @@
 {
-    "version": "1.0.2",
-    "notes": "Correcciones de errores y mejoras de rendimiento. Se habilitó el botón de actualización.",
-    "pub_date": "2025-12-04T15:56:26Z",
+    "version": "1.0.3",
+    "notes": "Corrección crítica: Se habilitó el botón de actualización y se corrigió la configuración de empaquetado.",
+    "pub_date": "2025-12-04T16:29:27Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUldVUmt2SFJWdEkveFp1ZTlGeHE1SitYNTE5NXFwNmJ5UGJ1TXlaaExXTHpVN2grajdLL1pWb1kKdW50cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzMzMzc1Nzg2CWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjJfeDY0X2VuLVVTLm1zaS56aXAKQjU5N0U1RjY4N0E5RjQ4QzM2M0NBMjA0RjJBMzcxQjQ3OEZBRjA1QkU5QzQ4OEE5QkQ4QzQ0RkY0NjA3N0I3N0M0N0MyM0MzQzM2RTU2RjU0Q0RBMjU3RjQyN0E5QzU2MDQyODk5M0QzRkI3Q0Q4MDkK",
-            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.2/AIKZ.Sistema.de.Gestion_1.0.2_x64_en-US.msi.zip"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUldVUmt2SFJWdEkveFp1ZTlGeHE1SitYNTE5NXFwNmJ5UGJ1TXlaaExXTHpVN2grajdLL1pWb1kKdW50cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzMzMzc3ODM4CWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjNfeDY0X2VuLVVTLm1zaS56aXAKSjJYZU56Qm5MTXN0WGhndmdudWJjRVV5S01odk8xdEdvMTlKMkVWeUFRPT0KSTJKZU56Qm5MTXN0WGhndmdudWJjRVV5S01odk8xdEdvMTlKMkVWeUFRPT0K",
+            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.3/AIKZ.Sistema.de.Gestion_1.0.3_x64_en-US.msi.zip"
         }
     }
 }

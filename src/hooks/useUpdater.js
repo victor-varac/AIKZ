@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 // Verificar si estamos en un entorno Tauri
 const isTauri = () => {
-  return typeof window !== 'undefined' && window.__TAURI__;
+  return typeof window !== 'undefined' && (window.__TAURI__ || window.__TAURI_INTERNALS__);
 };
 
 // Verificar si estamos en modo desarrollo
