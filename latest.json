@@ -4,7 +4,7 @@
     "pub_date": "2025-12-05T06:45:00Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTCt3WTBpQTBIQ0JNNEs3OU9PazBrdExPbnE0WFQ1NlhiU2ZldUFaRmZWaWwyc1paNFpHOEYrUmlabHFIN2p1eWttUlNsYzJtWWZwMCtpcThiRnhSdWpZSWM1dXRiMUF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0OTE3NDA2CWZpbGU6QUlLWiBTaXN0ZW1hIGRlIEdlc3Rpw7NuXzEuMC4xM194NjRfZW4tVVMubXNpLnppcAppY28yUGhRdXJzWUhQYW9VVm5WSSs2ZzZxTWJRbVFSOWxFR3h5L2JDNnp2UWNueldkNEJvZE9hMTc4OGV1elVPVFgzTS9xVWJrcVA3YzZsSmFlcmNCZz09Cg==",
+            "signature": "untrusted comment: signature from tauri secret key\nRURL+wY0iA0HCBM4K79OOk0ktLOnq4XT56XbSfeuAZFfVil2sZZ4ZG8F+RiZlqH7juykmRSlc2mYfp0+ip8bFxRujYIc5utb1Aw=\ntrusted comment: timestamp:1764917406\tfile:AIKZ Sistema de Gestión_1.0.13_x64_en-US.msi.zip\nico2PhQursYHPaoUVnVI+6g6qMbQmQR9lEGxy/bC6zvQcnzWd4BodOa1788euzUOTX3M/qUbkqP7c6lJaercBg==",
             "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.13/AIKZ.Sistema.de.Gestion_1.0.13_x64_en-US.msi.zip"
         }
     }
