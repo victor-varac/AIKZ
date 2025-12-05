@@ -1,11 +1,11 @@
 {
-    "version": "1.0.14",
-    "notes": "v1.0.14: Corrección de clave pública para actualizaciones.",
-    "pub_date": "2025-12-05T07:15:00Z",
+    "version": "1.0.15",
+    "notes": "v1.0.15: Verificación final de actualización automática con clave corregida.",
+    "pub_date": "2025-12-05T11:25:00Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "untrusted comment: signature from tauri secret key\nRURL+wY0iA0HCHzrS+pyuRTR1hqSzmdT00RvH65yzZPycLw9jjRcF4oQlTtkCvNE/HZIZaTm9EaC6E9LTusjCYzAEn4rNmFlUwA=\ntrusted comment: timestamp:1764919573\tfile:AIKZ Sistema de Gestión_1.0.14_x64_en-US.msi.zip\nwOn4zNB+S9+Tbfrd2Qzod6jLsUr8i7mgEQI6OGQxca/cTGVGliIr1r8GZRrBidoZEsdzccYM2SGkznQ7onCcDg==",
-            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.14/AIKZ.Sistema.de.Gestion_1.0.14_x64_en-US.msi.zip"
+            "signature": "untrusted comment: signature from tauri secret key\nRURL+wY0iA0HCDFV5St+g4z3d8t8IZKECLxr5XrZ0d5QjL84PRFMlp14hZbLclbqV88zMCXq3NCMh1IW++a+TsWLqT53Sienqw0=\ntrusted comment: timestamp:1764955373\tfile:AIKZ Sistema de Gestión_1.0.15_x64_en-US.msi.zip\nYlsNjbALdv5cO2KOA3tPaij4QseImQ3rcIjGuDoyLJJvexIiLg2i+9IY10vPDEIAOQgNG41NRLWPEHgxs9YrDA==",
+            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.15/AIKZ.Sistema.de.Gestion_1.0.15_x64_en-US.msi.zip"
         }
     }
 }
