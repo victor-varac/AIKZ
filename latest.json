@@ -1,11 +1,11 @@
 {
-    "version": "1.0.15",
-    "notes": "v1.0.15: Verificación final de actualización automática con clave corregida.",
-    "pub_date": "2025-12-05T11:25:00Z",
+    "version": "1.0.16",
+    "notes": "v1.0.16: Corrección definitiva de firma y compresión.",
+    "pub_date": "2025-12-05T12:55:00Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTCt3WTBpQTBIQ0RGVjVTdCtnNHozZDh0OElaS0VDTHhyNVhyWjBkNVFqTDg0UFJGTWxwMTRoWmJMY2xicVY4OHpNQ1hxM05DTWgxSVcrK2ErVHNXTHFUNTNTaWVucXcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0OTU1MzczCWZpbGU6QUlLWiBTaXN0ZW1hIGRlIEdlc3Rpw7NuXzEuMC4xNV94NjRfZW4tVVMubXNpLnppcApZbHNOamJBTGR2NWNPMktPQTN0UGFpajRRc2VJbVEzcmNJakd1RG95TEpKdmV4SWlMZzJpKzlJWTEwdlBERUlBT1FnTkc0MU5STFdQRUhneHM5WXJEQT09Cg==",
-            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.15/AIKZ.Sistema.de.Gestion_1.0.15_x64_en-US.msi.zip"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTCt3WTBpQTBIQ0sxK2I0dTFqTW5KQ28zaEVrcHc0dzNVeTBnNHlUYXpFSWhSZG9BUkxxZHFwdDZNSHYyRmRDMUg4cC9VSVhHcTFscW93cHhRTHh2ZDQzenZjcGVZeGdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0OTYxNDI3CWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjE2X3g2NF9lbi1VUy5tc2kuemlwCnlRRXB0RUQ3T3N6VXE5ZzNoc0EzSkprenkzTGVVaVJJalNqZDc5YlN4TlRNdGo5UzRwVUNjWVJDL0RFc0V2M1E5V1lBK0xoa1ZGWVpqQlBXSDUza0RRPT0K",
+            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.16/AIKZ.Sistema.de.Gestion_1.0.16_x64_en-US.msi.zip"
         }
     }
 }

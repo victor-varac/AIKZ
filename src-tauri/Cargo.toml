@@ -1,6 +1,6 @@
 [package]
 name = "aikz-gestion"
-version = "1.0.15"
+version = "1.0.16"
 description = "Sistema de gestión empresarial AIKZ"
 authors = ["AIKZ"]
 license = ""
