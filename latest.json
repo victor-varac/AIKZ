@@ -1,11 +1,11 @@
 {
-    "version": "1.0.10",
-    "notes": "v1.0.10: Corrección de permisos de seguridad (ACL) para actualizaciones automáticas.",
-    "pub_date": "2025-12-05T03:40:00Z",
+    "version": "1.0.11",
+    "notes": "v1.0.11: Verificación de actualización automática.",
+    "pub_date": "2025-12-05T04:30:00Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTCt3WTBpQTBIQ0JiVElpSEpOd2FCQTNuTmhLR2I2SkE4S1Zldyt0WjF3dkZ0UkwrM1ZPQjBxNW5qM09ab1dXNUtoSis0OVF2ZFB5TU5WUUNIb2dKSEkvc2JGeWFCNXdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0OTA1NTc4CWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjlfeDY0X2VuLVVTLm1zaS56aXAKeFpSbWgzNFJlemNKdW1BVGg4b2hoMjl0U1pjY2cxVEVGc1hPdnQ2NVRENDl5K2F6dkc2dzhSNnZIYnAvbXpCVUdNUkZxNEVSelVwaGNSVTlXeFJNRHc9PQo=",
-            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.10/AIKZ.Sistema.de.Gestion_1.0.10_x64_en-US.msi.zip"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTCt3WTBpQTBIQ0Ivd1F1T0tNcWFLN1pVQ01nZldmazZnN2RxVkoyQlRGem9pWVFrWXdrNmpGcTFFVFppbTRUNmo5OTFuZnRGZWNtd01TblZXREh5YWR5RWtXT2NiY1FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0OTA5NTA5CWZpbGU6QUlLWiBTaXN0ZW1hIGRlIEdlc3Rpw7NuXzEuMC4xMV94NjRfZW4tVVMubXNpLnppcApYbUtSL3JybTZJVzY2eDFwSHF0akw1ditXRCtxZTlqTzJOQ0NnRkxwazJFQ2ZQOTliaHZpZkY1QmZrN2dpRzRKdEV2Y1RjdGFnaS9oZmJwblM2bEpBUT09Cg==",
+            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.11/AIKZ.Sistema.de.Gestion_1.0.11_x64_en-US.msi.zip"
         }
     }
 }
