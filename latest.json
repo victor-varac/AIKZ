@@ -1,11 +1,11 @@
 {
-    "version": "1.0.18",
-    "notes": "v1.0.18: Solución del error 'Compression method not supported'. Se corrigió el método de compresión del instalador para compatibilidad con el updater de Tauri.",
-    "pub_date": "2025-12-05T22:30:00Z",
+    "version": "1.0.19",
+    "notes": "v1.0.19: Solución definitiva con compresor Rust nativo (zip crate).",
+    "pub_date": "2025-12-05T23:05:00Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTCt3WTBpQTBIQ0NJc0NualNMZ201YlZZOG9DcDFZeDQya3pHcGV1TzB2d2pGV1pSb29jZ3RKZE9teTR1NXBpVnNEU1FIaitPNHNGdDJQcnZyZUZCbm1USkdPbGF6eEEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0OTc0Mzg5CWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjE4X3g2NF9lbi1VUy5tc2kuemlwCklCL1JJUlM4N1dQOTFteXNkZ0krayt0SE9FemF1QWdVeUR2OWJjSjdUTjc1SmtZYVF2SGRjTHcyU3ZtOUIwaFU5dDh3NGpWcXRvaDVLSStRUGdjcUN3PT0K",
-            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.18/AIKZ.Sistema.de.Gestion_1.0.18_x64_en-US.msi.zip"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTCt3WTBpQTBIQ0xQMmw3RHdxY0R1MjhDNCtsL1BLZ2hDeFdRS0FCQU8rZ0p2UDEvU0szSWxaYmRzb1RYZ3ozekVKTXNJcUJmQkJKUjlwQjhENSs5MmU1cUVQckZyc2dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0OTc1OTQ0CWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjE5X3g2NF9lbi1VUy5tc2kuemlwCnJ5Y1djZ0ZsVHM1R1hCckFYM0Y5YzJyMzlnZVduaDJBQnFBWkh6SW9NZU9XZmVybGZTYTVRTUxnb1JJUlM3VWF1c2w5ZW1iTE1vYzIyL3YvOVFzZkFBPT0K",
+            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.19/AIKZ.Sistema.de.Gestion_1.0.19_x64_en-US.msi.zip"
         }
     }
 }
