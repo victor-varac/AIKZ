@@ -34,9 +34,10 @@ export const useUpdater = () => {
       }
     } catch (err) {
       console.error('Error al verificar actualizaciones:', err);
-      // DEBUG: Mostrar alerta con el error
-      alert(`Error al buscar actualizaciones: ${err.message}`);
-      setError(err.message);
+      // DEBUG: Mostrar alerta con el error detallado
+      const errorMsg = err instanceof Error ? err.message : JSON.stringify(err);
+      alert(`Error al buscar actualizaciones: ${errorMsg}`);
+      setError(errorMsg);
     }
   };
 
