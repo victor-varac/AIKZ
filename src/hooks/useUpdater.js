@@ -71,8 +71,9 @@ export const useUpdater = () => {
       await relaunch();
     } catch (err) {
       console.error('Error durante la actualización:', err);
-      alert(`Error durante la actualización: ${err.message}`);
-      setError(err.message);
+      const errorMsg = err instanceof Error ? err.message : JSON.stringify(err);
+      alert(`Error durante la actualización: ${errorMsg}`);
+      setError(errorMsg);
       setIsUpdating(false);
     }
   };
