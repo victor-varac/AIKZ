@@ -1,11 +1,11 @@
 {
-    "version": "1.0.7",
-    "notes": "Prueba final de auto-update desde v1.0.6.",
-    "pub_date": "2025-12-04T23:24:32Z",
+    "version": "1.0.8",
+    "notes": "Depuración exhaustiva: Nuevas claves de firma y alertas de error visibles.",
+    "pub_date": "2025-12-05T01:26:18Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUldVUmt2SFJWdEkveFp1ZTlGeHE1SitYNTE5NXFwNmJ5UGJ1TXlaaExXTHpVN2grajdLL1pWb1kKdW50cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzMzNDAyOTIwCWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjdfeDY0X2VuLVVTLm1zaS56aXAKZ093a1d0QzZ1YnZ1S3F4R3Z3d0VjV3B4T3lVb1l5Z1d3QzR5VEEvZkhoOUlRWEsybkRBPT0KcGNEMWM2VWhZZ2hxZ2p0bjJUZGdSS2xiVHQ1EsybkRBPT0K",
-            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.7/AIKZ.Sistema.de.Gestion_1.0.7_x64_en-US.msi.zip"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUldRVTd6Y2t9OMUZzeFV0N1Q2YUVYU1FIbU1QSENEZ3BYOUVwdAoKdW50cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzMzNDEwMjE4CWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjhfeDY0X2VuLVVTLm1zaS56aXAKa1Z1N01wN214U21lT2p6N2k5Y0t3b01lZ213VlVvQ2V1d2I0ZnJmNm1tMk9OMUZzeFV0N1Q2YUVYU1FIbU1QSENEZ3BYOUVwdAo=",
+            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.8/AIKZ.Sistema.de.Gestion_1.0.8_x64_en-US.msi.zip"
         }
     }
 }
