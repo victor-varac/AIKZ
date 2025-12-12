@@ -2,6 +2,44 @@
 
 Esta documentación explica cómo configurar y usar el sistema de actualizaciones automáticas implementado en el ERP AIKZ.
 
+---
+
+## ⚠️ PROCESO ACTUALIZADO (Diciembre 2025)
+
+**IMPORTANTE:** El proceso de build y firma ha sido actualizado para solucionar el error "Compression method not supported".
+
+### Cambio Principal
+
+**❌ ANTES (Incorrecto):**
+- Build con `npm run tauri build`
+- Firmar manualmente con scripts PowerShell
+- Crear `.msi.zip` manualmente con `Compress-Archive`
+
+**✅ AHORA (Correcto):**
+- Configurar variables de entorno `TAURI_SIGNING_PRIVATE_KEY` y `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`
+- Build con `npm run tauri build` (Tauri crea automáticamente `.msi.zip` y `.sig`)
+- Usar el script automatizado `build-and-release.ps1`
+
+### Script Automatizado
+
+Para simplificar el proceso, usa el script `build-and-release.ps1`:
+
+```powershell
+.\build-and-release.ps1 -Version 1.0.X
+```
+
+Este script:
+- ✅ Valida la versión y la clave privada
+- ✅ Configura las variables de entorno correctamente
+- ✅ Ejecuta el build de Tauri
+- ✅ Verifica que se generaron todos los archivos
+- ✅ Renombra archivos para GitHub (sin espacios)
+- ✅ Muestra la firma para copiar en `latest.json`
+
+Ver [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md) para el proceso completo paso a paso.
+
+---
+
 ## 📋 Índice
 
 1. [Configuración Inicial](#configuración-inicial)
@@ -34,6 +72,7 @@ npx @tauri-apps/cli@latest signer generate -w ~/.tauri/aikz-gestion.key
 ```
 
 Este comando generará:
+
 - **Clave privada**: Guardada en `~/.tauri/aikz-gestion.key` (mantén esto en secreto)
 - **Clave pública**: Se mostrará en la consola (necesitas copiarla)
 
@@ -68,6 +107,7 @@ Por tu clave pública real:
 #### Paso 1: Identificar tu repositorio
 
 Necesitas saber el nombre de tu repositorio de GitHub. Por ejemplo:
+
 - Usuario: `tu-usuario-github`
 - Repositorio: `aikz-erp`
 
@@ -108,6 +148,7 @@ Si planeas usar GitHub Actions para automatizar los builds:
 Antes de crear un release, actualiza la versión en:
 
 **`src-tauri/tauri.conf.json`:**
+
 ```json
 {
   "productName": "AIKZ Sistema de Gestión",
@@ -117,6 +158,7 @@ Antes de crear un release, actualiza la versión en:
 ```
 
 **`src-tauri/Cargo.toml`:**
+
 ```toml
 [package]
 name = "aikz-gestion"
@@ -134,24 +176,46 @@ npm run tauri build
 Este proceso tomará varios minutos y generará:
 
 **Windows:**
+
 - `src-tauri/target/release/bundle/msi/AIKZ Sistema de Gestión_1.0.1_x64_es-MX.msi`
 - `src-tauri/target/release/bundle/msi/AIKZ Sistema de Gestión_1.0.1_x64_es-MX.msi.zip`
 - `src-tauri/target/release/bundle/msi/AIKZ Sistema de Gestión_1.0.1_x64_es-MX.msi.zip.sig`
 
 **macOS (si aplica):**
+
 - `src-tauri/target/release/bundle/macos/AIKZ Sistema de Gestión.app.tar.gz`
 - `src-tauri/target/release/bundle/macos/AIKZ Sistema de Gestión.app.tar.gz.sig`
 
-### Paso 3: Firmar el Instalador
+### Paso 3: Firmar el Instalador (PROCESO CORRECTO)
 
-El instalador debe firmarse con tu clave privada:
+**⚠️ IMPORTANTE: NO firmar manualmente**
 
-**Windows:**
-```bash
-npm run tauri signer sign "src-tauri/target/release/bundle/msi/AIKZ Sistema de Gestión_1.0.1_x64_es-MX.msi.zip" -k ~/.tauri/aikz-gestion.key
+Tauri firma automáticamente el instalador cuando configuras las variables de entorno **ANTES** de ejecutar el build.
+
+**Proceso correcto (Automático):**
+
+```powershell
+# Leer clave privada
+$keyContent = Get-Content -Path "$env:USERPROFILE\.tauri\aikz-gestion.key" -Raw
+
+# Configurar variables de entorno
+$env:TAURI_SIGNING_PRIVATE_KEY = $keyContent
+$env:TAURI_SIGNING_PRIVATE_KEY_PASSWORD = "AIKZUpdater2025"
+
+# Build (esto crea automáticamente .msi, .msi.zip y .msi.zip.sig)
+npm run tauri build
+
+# Limpiar variables sensibles
+Remove-Item Env:\TAURI_SIGNING_PRIVATE_KEY
+Remove-Item Env:\TAURI_SIGNING_PRIVATE_KEY_PASSWORD
 ```
 
-Esto generará el archivo `.sig` necesario.
+Cuando las variables están configuradas, Tauri:
+- ✅ Crea el archivo `.msi`
+- ✅ **Automáticamente** crea el `.msi.zip` con compresión compatible
+- ✅ **Automáticamente** firma y genera el archivo `.msi.zip.sig`
+
+**⚠️ NO usar PowerShell `Compress-Archive` manualmente - esto causa el error "Compression method not supported"**
 
 ### Paso 4: Crear el archivo latest.json
 
@@ -172,6 +236,7 @@ Crea un archivo llamado `latest.json` con el siguiente contenido:
 ```
 
 **Para obtener la firma:**
+
 - Abre el archivo `.sig` con un editor de texto
 - Copia TODO el contenido
 - Pégalo en el campo `signature` (en una sola línea)
@@ -183,6 +248,7 @@ Crea un archivo llamado `latest.json` con el siguiente contenido:
 3. En **Choose a tag**, escribe `v1.0.1` y click en **Create new tag**
 4. En **Release title**, escribe `v1.0.1`
 5. En **Description**, describe los cambios:
+
    ```markdown
    ## 🎉 Nueva versión 1.0.1
 
@@ -209,6 +275,7 @@ Crea un archivo llamado `latest.json` con el siguiente contenido:
 ### Paso 6: Verificar la URL del latest.json
 
 La URL de tu archivo `latest.json` debe ser:
+
 ```
 https://github.com/tu-usuario/aikz-erp/releases/latest/download/latest.json
 ```
@@ -224,6 +291,7 @@ Para cada nueva versión:
 ### 1. Incrementar la Versión
 
 Actualiza la versión en:
+
 - `src-tauri/tauri.conf.json`
 - `src-tauri/Cargo.toml`
 
@@ -250,6 +318,7 @@ npm run tauri signer sign "src-tauri/target/release/bundle/msi/AIKZ Sistema de G
 ### 5. Actualizar latest.json
 
 Actualiza el archivo `latest.json` con:
+
 - Nueva versión
 - Nueva firma (del archivo `.sig`)
 - Nueva URL (con el nuevo número de versión)
@@ -260,9 +329,10 @@ Actualiza el archivo `latest.json` con:
 
 Repite el proceso del Paso 5 de "Crear el Primer Release" con la nueva versión.
 
-### 7. ¡Listo!
+### 7. ¡Listo
 
 Los usuarios que tengan la aplicación instalada:
+
 - Recibirán una notificación automática de actualización (banner)
 - O pueden hacer clic en "Buscar Actualizaciones" en el header
 - La aplicación descargará e instalará la actualización automáticamente
@@ -295,6 +365,7 @@ Los usuarios que tengan la aplicación instalada:
 **Causa**: La firma no coincide con la clave pública configurada.
 
 **Solución**:
+
 - Verifica que la clave pública en `tauri.conf.json` sea correcta
 - Asegúrate de haber firmado el instalador con la clave privada correcta
 - El contenido del archivo `.sig` debe estar completo en el `latest.json`
@@ -304,6 +375,7 @@ Los usuarios que tengan la aplicación instalada:
 **Causa**: No se puede acceder al endpoint de GitHub.
 
 **Solución**:
+
 - Verifica que el URL en `tauri.conf.json` sea correcto
 - Asegúrate de que el release sea público
 - Verifica que el archivo `latest.json` exista en el release
@@ -313,6 +385,7 @@ Los usuarios que tengan la aplicación instalada:
 **Causa**: La versión en `latest.json` no es mayor que la actual.
 
 **Solución**:
+
 - Verifica que la versión en `latest.json` sea mayor que la instalada
 - El formato de versión debe ser semántico (ej: 1.0.1, 1.1.0, 2.0.0)
 
@@ -321,7 +394,9 @@ Los usuarios que tengan la aplicación instalada:
 **Causa**: Windows requiere permisos de administrador.
 
 **Solución**:
+
 - Configura `installMode` en `tauri.conf.json`:
+
   ```json
   "windows": {
     "installMode": "passive"
@@ -333,6 +408,7 @@ Los usuarios que tengan la aplicación instalada:
 **Causa**: El sistema de actualizaciones solo funciona en builds de producción.
 
 **Solución**:
+
 - El botón y las notificaciones solo aparecen en la versión compilada (`.msi`)
 - En modo desarrollo (`npm run tauri:dev`) no se muestran
 

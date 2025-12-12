@@ -55,10 +55,10 @@ const PedidoForm = ({ isOpen, onClose, onSave, pedido = null, notaVentaId }) => 
     try {
       setLoadingProductos(true);
 
-      // Cargar productos de ambos materiales
+      // Cargar TODOS los productos de ambos materiales
       const [celofanResponse, polietilenoResponse] = await Promise.all([
-        getProductosPorMaterial('celofan', { limit: 50 }),
-        getProductosPorMaterial('polietileno', { limit: 50 })
+        getProductosPorMaterial('celofan', { limit: 1000 }),
+        getProductosPorMaterial('polietileno', { limit: 1000 })
       ]);
 
       const todosLosProductos = [

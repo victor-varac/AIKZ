@@ -1,11 +1,11 @@
 {
-    "version": "1.0.20",
-    "notes": "v1.0.20: Solución de emergencia con compresión STORED (sin compresión) para máxima compatibilidad.",
-    "pub_date": "2025-12-05T23:25:00Z",
+    "version": "1.0.21",
+    "notes": "v1.0.21: Fix bug - Productos no aparecen completos en selector de pedidos (PedidoForm y NotaVentaForm).",
+    "pub_date": "2025-12-12T16:30:00Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTCt3WTBpQTBIQ0lYeUx3a0hQb0hwK0tBQjBGZzVCYVRhT1lPUW1VMXRtc0ZaR3J4TFRFcWJSbkUybzBNQU5SazNrbUsycGpVT2hiU2Ywb1lxc01pdXh0UCtFclJRaUE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY0OTc3MjU1CWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjIwX3g2NF9lbi1VUy5tc2kuemlwCjZJbXFuNTRFYWJBZU4xaHhBcmZwUGY0UjdSeE44dWNhUTlRTWEvRlRCTWRGS2o3TjZrNW01bWluZkhRNzVYazhIcnFuTjNkYStKQ0VxVjFvWXgrNkFBPT0K",
-            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.20/AIKZ.Sistema.de.Gestion_1.0.20_x64_en-US.msi.zip"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSTCt3WTBpQTBIQ0RycXBSVmFBZDE1OG5ndVVrUTFpVkI3ZGVWM1JKVERwTHNOa3p2cTZvaDcxY0VBTmZPZEE3L0FwV3FQUSsrMEdQQVlmcDdSbmhqajVrMHNIZktxTFEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY1NTU3NzAxCWZpbGU6QUlLWi5TaXN0ZW1hLmRlLkdlc3Rpb25fMS4wLjIxX3g2NF9lbi1VUy5tc2kuemlwCjVlK1JsbDNTL3BGRmphZVMvenVFTXBXMUlBUzh5MEJlMUZBT0hKaEt1SGdMaW5DVVJYWjA1ZnliTFVTR3NqekZPWmY2STNwWFNUY0lvTkI5SXlHMUNRPT0K",
+            "url": "https://github.com/victor-varac/AIKZ/releases/download/v1.0.21/AIKZ.Sistema.de.Gestion_1.0.21_x64_en-US.msi.zip"
         }
     }
 }

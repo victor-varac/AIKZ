@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { getClientes, getProductos, createNotaVenta } from '../../services/api/pedidos';
+import { getClientes, createNotaVenta } from '../../services/api/pedidos';
+import { getProductosPorMaterial } from '../../services/api/productos';
 import Modal from '../common/Modal';
 
 const NotaVentaForm = ({ isOpen, onClose, onSuccess }) => {
@@ -67,12 +68,22 @@ const NotaVentaForm = ({ isOpen, onClose, onSuccess }) => {
   const loadInitialData = async () => {
     try {
       setLoading(true);
-      const [clientesData, productosData] = await Promise.all([
+
+      // Cargar clientes y productos en paralelo
+      const [clientesData, celofanResponse, polietilenoResponse] = await Promise.all([
         getClientes(),
-        getProductos()
+        getProductosPorMaterial('celofan', { limit: 1000 }),
+        getProductosPorMaterial('polietileno', { limit: 1000 })
       ]);
+
+      // Combinar productos de ambos materiales
+      const productosData = [
+        ...(celofanResponse.data || []),
+        ...(polietilenoResponse.data || [])
+      ];
+
       setClientes(clientesData || []);
-      setProductos(productosData || []);
+      setProductos(productosData);
     } catch (err) {
       console.error('Error loading data:', err);
       setError('Error al cargar datos: ' + err.message);
